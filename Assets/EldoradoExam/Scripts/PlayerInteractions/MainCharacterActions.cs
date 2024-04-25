@@ -3,30 +3,33 @@ using UnityEngine.InputSystem;
 
 public class CharacterManager : MonoBehaviour
 {
-    [SerializeField] private MouseLook _headController;
+    [SerializeField] private Camera _camera;
+    [SerializeField] private MouseLook _mouseLook;
     [SerializeField] private MovementController _moveController;
+    [SerializeField] private ItemSelection _itemSelection;
+    [SerializeField] private ScriptableGameEvent _switchInventoryPanelEvent;
+    [SerializeField] private ScriptableInventory _inventory;
 
     private Vector2 _directionalInput;
     private Vector2 _lookInput;
-    private bool _runPressed;
 
     #region Unity Messages
     private void Start()
     {
         _directionalInput = Vector2.zero;
         _lookInput = Vector2.zero;
-        _runPressed = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void FixedUpdate()
     {
         _moveController.Move(_directionalInput);
+        _itemSelection.Search();
     }
 
     private void LateUpdate()
     {
-        _headController.Look(_lookInput);
+        _mouseLook.Look(_lookInput);
     }
     #endregion
 
@@ -44,7 +47,26 @@ public class CharacterManager : MonoBehaviour
     public void FireAction(InputAction.CallbackContext context)
     {
         bool pressed = context.ReadValueAsButton();
-        Debug.Log("fire pressed: " + pressed);
+        if (pressed)
+        {
+            return;
+        }
+
+        if (_itemSelection.HasItem)
+        {
+            Item item = _itemSelection.GetItem;
+            _inventory.Add(item);
+            item.gameObject.SetActive(false);
+        }
+    }
+
+    public void InventoryAction(InputAction.CallbackContext context)
+    {
+        bool pressed = context.ReadValueAsButton();
+        if (!pressed)
+        {
+            _switchInventoryPanelEvent.Call();
+        }
     }
     #endregion
 }

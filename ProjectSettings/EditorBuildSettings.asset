@@ -4,6 +4,9 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/EldoradoExam/Scenes/Scene.unity
+    guid: 38efb17220b5e024a83533378deced4a
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 8ac45a540376a8448a2d4245d088cab6, type: 2}

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4176d83e69bd69d4b992cd15bd250f48, type: 3}
-  m_Name: CollectableItem B
+  m_Name: SCB_CollectableItem_B
   m_EditorClassIdentifier: 
   _name: Item A
-  _icon: {fileID: 0}
+  _icon: {fileID: 927231084, guid: a30e7b95b7e5fcf46b4442657b57ce01, type: 3}

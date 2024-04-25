@@ -4,14 +4,12 @@ using UnityEngine;
 [Serializable]
 public class MovementController
 {
-    [SerializeField] private CharacterController _rigidbody;
     [SerializeField] private CharacterController _characterController;
     [SerializeField] private Transform _cameraTransform;
     [SerializeField] private float _SpeedMultiplier = 100f;
     [SerializeField] private float _rightSpeed = 3f;
     [SerializeField] private float _forwardSpeed = 5f;
     [SerializeField] private float _backwardSpeed = 2f;
-    private static readonly float RunMultiplier = 2f;
 
     public void Move(Vector2 directionalInput)
     {

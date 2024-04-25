@@ -1,19 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-public class ItemSearching : MonoBehaviour
+[Serializable]
+public class ItemSelection
 {
     [SerializeField] private LayerMask _collectableMask;
     [SerializeField] private Camera _camera;
     private GameObject _selectedGameObject;
     private Item _selectedItem;
-
-    public void SearchItems()
+    public bool HasItem => !ReferenceEquals(_selectedItem, null);
+    public Item GetItem => _selectedItem;
+    public void Search()
     {
         Ray ray = new Ray(_camera.transform.position, _camera.transform.forward);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 10f, _collectableMask))
+        if (Physics.Raycast(ray, out hit, 1000f, _collectableMask))
         {
             GameObject hitObj = hit.collider.gameObject;
 
@@ -38,7 +39,8 @@ public class ItemSearching : MonoBehaviour
     private void Select(GameObject newSelectedGameObject)
     {
         _selectedGameObject = newSelectedGameObject;
-        _selectedItem = newSelectedGameObject.GetComponent<Item>();
+        _selectedItem = newSelectedGameObject.GetComponentInParent<Item>();
+        _selectedItem.Select();
     }
 
     private void Unselect()

@@ -121,7 +121,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Collectables_0
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 564
+        width: 394
+        height: 397
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab5c0949a1303c41b0af49ab23f680b
+      internalID: -1639086084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Collectables_1
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 610
+        width: 334
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38348acacf174d042bd9282d5acad008
+      internalID: 927231084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Collectables_2
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 100
+        width: 390
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9f9313f41019524e9f8decc69e53278
+      internalID: 1510801778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +195,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Collectables_0: -1639086084
+      Collectables_1: 927231084
+      Collectables_2: 1510801778
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

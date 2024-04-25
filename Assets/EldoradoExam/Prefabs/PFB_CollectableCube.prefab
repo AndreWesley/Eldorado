@@ -137,7 +137,7 @@ Transform:
   m_Children:
   - {fileID: 2395022721325903488}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &8746619032059909336
 Rigidbody:
@@ -180,4 +180,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _renderer: {fileID: 549193004029917995}
   _selectedColor: {r: 0.21226418, g: 0.22956493, b: 1, a: 1}
-  _scriptableItem: {fileID: 0}
+  _scriptableItem: {fileID: 11400000, guid: 825938468f0cf0e49a46524ae2ba9428, type: 2}
+  _rigidbody: {fileID: 8746619032059909336}

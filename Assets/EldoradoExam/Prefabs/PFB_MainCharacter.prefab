@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2910181748818606953}
   - component: {fileID: 1856349558111396102}
   m_Layer: 0
-  m_Name: HeadVerticalAxis
-  m_TagString: Untagged
+  m_Name: MainCamera
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -266,6 +266,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 82c344c3-d69d-4907-ac37-b63e070535de
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7594432768434155643}
+        m_TargetAssemblyTypeName: CharacterManager, Assembly-CSharp
+        m_MethodName: InventoryAction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: bcd99628-98ee-4564-b8e4-0b4635ccebb0
+    m_ActionName: Player/Inventory[/Keyboard/i]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -283,22 +299,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4f94fd6746c0c442bfacf7aa3d16610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _headController:
-    _collectableMask:
-      serializedVersion: 2
-      m_Bits: 8
-    _camera: {fileID: 2910181748818606953}
+  _camera: {fileID: 2910181748818606953}
+  _mouseLook:
     _horizontalRotationRef: {fileID: 5329448741357472255}
     _verticalRotationRef: {fileID: 6937900823827485788}
     _sensibility: 3
   _moveController:
-    _rigidbody: {fileID: 0}
     _characterController: {fileID: 5873592668087397131}
     _cameraTransform: {fileID: 6937900823827485788}
     _SpeedMultiplier: 40
     _rightSpeed: 3
     _forwardSpeed: 5
     _backwardSpeed: 2
+  _itemSelection:
+    _collectableMask:
+      serializedVersion: 2
+      m_Bits: 8
+    _camera: {fileID: 2910181748818606953}
+  _switchInventoryPanelEvent: {fileID: 11400000, guid: 84aebfd8db46d7849882fc5a7e0b0a3b, type: 2}
+  _inventory: {fileID: 11400000, guid: ebd25938428ebd24db4ad29a101644a4, type: 2}
 --- !u!1 &6305402821440787769
 GameObject:
   m_ObjectHideFlags: 0
